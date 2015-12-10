@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="pages/appoint/appoint.css">
+<div class="appoint_view" ng-controller="appointCtrl">
+    <form name="appoint_form" novalidate>
+        <div>
+            <label>姓名:</label>
+            <input type="text" required name="name" ng-model="data.name"></div>
+        <div>
+            <label>日期:</label>
+            <select name="date" required ng-model="data.date" ng-options="date.value as date.name for date in select.dates">
+                <option value="" disabled>请选择日期</option>
+            </select>
+        </div>
+        <div>
+            <label>时间:</label>
+            <select name="time" ng-model="data.time" required ng-options="time.value as time.name for time in select.times">
+                <option value="" disabled>请选择时间</option>
+            </select>
+        </div>
+        <div>
+            <label>电话:</label>
+            <input type="text" required name="tel" ng-model="data.tel"></div>
+        <div>
+            <label>品牌:</label>
+            <input type="text" required name="brand" ng-model="data.brand"></div>
+        <div>
+            <label>型号:</label>
+            <input type="text" required name="model" ng-model="data.model"></div>
+        <div>
+            <label>屏幕颜色:</label>
+            <input type="text" required name="color" ng-model="data.color"></div>
+        <div>
+            <label>故障描述:</label>
+            <input type="text" required name="troubleDetail" ng-model="data.troubleDetail"></div>
+        <div>
+            <label>备注:</label>
+            <input type="text" name="remark" ng-model="data.remark"></div>
+        <div>
+            <input type="button" value="提交信息" ng-disabled="!appoint_form.$valid||!appoint_form.$dirty" ng-click="submit()"></div>
+    </form>
+    <div>
+        <div ng-repeat="d in data_submit">
+            {{d}}
+        </div>
+    </div>
+</div>

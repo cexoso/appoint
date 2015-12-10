@@ -1,0 +1,7 @@
+{
+    "phone_brand":"SELECT * FROM phone_brand WHERE ?",
+    "phone_brand_model":"SELECT * FROM phone_brand_model where ?",
+    "phone_trouble_type":"SELECT * FROM phone_trouble_type",
+    "phone_trouble_type_detail":"SELECT * FROM phone_trouble_type_detail where ?",
+    "phone_trouble_type_detail_repair_price":"SELECT * FROM phone_trouble_type_detail_repair_price where ? and ? and ?"
+}

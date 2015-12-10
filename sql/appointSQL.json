@@ -1,0 +1,4 @@
+{
+    "appoint_post":"INSERT INTO appoint SET ?",
+    "appoint_get":"SELECT * FROM appoint where ?"
+}

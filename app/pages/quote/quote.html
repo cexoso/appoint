@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="pages/quote/quote.css">
+<div class="quote_view" ng-controller="quoteCtrl">
+
+
+    <form name="quote_form" novalidate>
+        <div>
+            <label>品牌</label>
+            <select ng-model="data.brandid" ng-options="brand.name for brand in select.phone_brand">
+                <option value="" disabled>请选择手机品牌</option>
+            </select>
+        </div>
+        <div>
+            <label>型号</label>
+            <select ng-model="data.brand_model_id" name="model" required ng-options="model.name for model in select.phone_brand_model">
+                <option value="" disabled>请选择手机型号</option>
+            </select>
+            
+        </div>
+        <div>
+            <label>故障</label>
+            <select ng-model="data.troubleid" ng-options="trouble.name for trouble in select.phone_trouble_type">
+                <option value="" disabled>请选择故障类型</option>
+            </select>
+        </div>
+        <div>
+            <label>详细故障</label>
+            <select ng-model="data.trouble_detail_repair_id" required name="detail" ng-options="detail.name for detail in select.phone_trouble_type_detail">
+                <option value="" disabled>请选择故障类型</option>
+            </select>
+        </div>
+        
+        <input type="button" value="查询" ng-disabled="!quote_form.$valid" ng-click="query()">
+    </form>
+    <div ng-repeat="q in quote">
+        {{q}}
+    </div>
+    <input type="button" value="快捷下单" ng-disabled="!quote_form.$valid" ng-click="quickOrder()">
+    
+</div>

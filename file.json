@@ -1,0 +1,8 @@
+{
+   "mysql":{
+        "host":"101.251.235.188",
+        "user":"patdev",
+        "password":"patdev123",
+        "database":"test"
+   }
+}

@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="pages/query/query.css">
+<div class="query_view" ng-controller="queryCtrl">
+    <form name="query_form">
+        <h1>请输入手机号:</h1>
+        <input type="text" ng-model="data.tel">
+        <input type="button" value="查询" ng-click="query()">
+        <div ng-repeat="d in data_query">
+            {{d}} <button ng-click="pay(d)">付款</button>
+        </div>
+    </form>
+</div>
